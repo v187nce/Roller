@@ -10,7 +10,7 @@ public class Roller{
   }
   
   public void tanke(double menge){
-    tankinhalt = tankinhalt + mange;
+    tankinhalt = tankinhalt + menge;
   }
   public void fahre(int strecke){
     kilometerstand = kilometerstand + strecke;
