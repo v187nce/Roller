@@ -16,7 +16,7 @@ public class Roller{
     kilometerstand = kilometerstand + strecke;
   }
   public boolean passtInTank(double menge){
-    if (tankgoesse > tankinhalt + menge){
+    if (tankgroesse < tankinhalt + menge){
       return false;
     }
     return true;

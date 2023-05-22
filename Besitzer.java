@@ -15,7 +15,7 @@ public class Besitzer{
     roller.fahre(strecke);
   }
   public void tankeDeinenRoller(double menge){
-    if (roller.passInTank(menge)){
+    if (roller.passtInTank(menge)){
       roller.tanke(menge);
     }
   }
