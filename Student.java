@@ -1,10 +1,9 @@
-public class Student extends Human {
+public class Student {
     private String schoolClass;
     private String school;
     private String lk;
     
     public Student(int age,int height,String sex, String schoolClass,String school,String lk){
-        super(height, age, sex);
         this.schoolClass = schoolClass;
         this.school = school;
         this.lk = lk;

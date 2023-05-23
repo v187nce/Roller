@@ -1,6 +1,14 @@
+
+
 public class Main {
     public static void main(String[] args){
-        Roller roller = new Roller(12.0,2,120.0);
-        System.out.println(roller.getKilometerstand());
+        Roller flitzer = new Roller(8.4,2352,5.2);
+        Roller roller2 = new Roller(7.1, 11, 1.0);
+        Besitzer paul = new Besitzer(50.0, "Paul", flitzer);
+        Besitzer tim = new Besitzer(50, "Tim", roller2);
+        System.out.println("Aktueller Kilometerstand: " + flitzer.getKilometerstand() + " und aktuelle Tankinhalt: " + flitzer.getTankinhalt());
+        System.out.println("Paul will 10 km fahren");
+        paul.FahreDeinenRoller(10);
+        
     }
 }
