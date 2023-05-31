@@ -19,7 +19,7 @@ public class Roller{
     if (tankinhalt < strecke * 2){
       System.out.println("Der Tank reicht nicht aus um diese Strecke zurückzulegen!");
       double ok = tankinhalt*2;
-      System.out.println("Die zurückgelegte Strecke beträgt " + ok + " km und somit die neue Kilometeranzahl " + kilometerstand + ericspenis);
+      System.out.println("Die zurückgelegte Strecke beträgt " + ok + " km und somit die neue Kilometeranzahl " + kilometerstand + ok);
       System.out.println("Der Tank ist nun leer!");
       return;
     } else if (tankinhalt < 0){
