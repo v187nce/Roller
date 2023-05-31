@@ -12,21 +12,25 @@ public class Roller{
   public void tanke(double menge){
     tankinhalt = tankinhalt + menge;
   }
-  public void fahre(int strecke){
-    if (tankinhalt * 2 < strecke){
-      System.out.println("Der Tank reicht nicht aus um diese Strecke zurückzulegen!");
-      double ericspenis = tankinhalt*2;
-      System.out.println("Die zurückgelegte Strecke beträgt " + ericspenis + " km und somit die neue Kilometeranzahl " + kilometerstand + ericspenis);
-      return;
-    } 
-    if (tankinhalt < 0){
-      System.out.println("Der Tank ist leer!");
-      tankinhalt = 0;
-      return;
+  public double getTankGroesse(){
+    return tankgroesse;
   }
-  kilometerstand = kilometerstand + strecke;
-  tankinhalt = tankinhalt * 2 - strecke;
-  System.out.println("Der neue Kilometerstand beträgt " + kilometerstand + " Kilometer und der Tankinhalt beträgt " + tankinhalt + " Liter");
+  public void fahre(int strecke){
+    if (tankinhalt < strecke * 2){
+      System.out.println("Der Tank reicht nicht aus um diese Strecke zurückzulegen!");
+      double ok = tankinhalt*2;
+      System.out.println("Die zurückgelegte Strecke beträgt " + ok + " km und somit die neue Kilometeranzahl " + kilometerstand + ericspenis);
+      System.out.println("Der Tank ist nun leer!");
+      return;
+    } else if (tankinhalt < 0){
+      System.out.println("Der Tank ist leer!");
+      tankinhalt = 0; 
+      return; 
+    } else {
+      kilometerstand = kilometerstand + strecke; 
+      tankinhalt = tankinhalt - strecke * 2; 
+      System.out.println("Der neue Kilometerstand beträgt " + kilometerstand + " Kilometer und der Tankinhalt beträgt " + tankinhalt + " Liter");
+  }
 
 }
   public boolean passtInTank(double menge){

@@ -17,6 +17,8 @@ public class Besitzer{
   public void tankeDeinenRoller(double menge){
     if (roller.passtInTank(menge)){
       roller.tanke(menge);
+      geld = geld - menge/2; 
+      System.out.println("Der Tankinhalt beträgt nun: " + roller.getTankinhalt() + " Liter");
     }
   }
   public void erhalteTaschenGeld(double summe){
